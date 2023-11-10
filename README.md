@@ -1,6 +1,8 @@
 # What is mathematics for ? ###
-
 * A mathematics module with different implementations around topics :
+
+## Status of the Project
+Work in progress. 
 
 <ol>
 <li>Algebra</li>
