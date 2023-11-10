@@ -1,19 +1,15 @@
-# What is mathematics for ? ###
-* A mathematics module with different implementations around topics :
+# A mathematics module #
+* Implementations around topics :
+<br>
 
-## Status of the Project
-Work in progress. 
+| Algebra     | 	Algorithm            | Approximation	 |    Function    |   Geometry    |   Modular      |  Primes        | Random         |
+|------------|:-----------------------:|:--------------:|---------------:|:--------------:|:--------------:|:--------------:|:--------------:|
+|           |   	Euclidean            |     	           |    	         |    	          |    	           |    	          |    	           | 
+|           |   	Extended Euclidean   |     	           |    	         |    	          |    	           |    	          |    	           | 
 
-<ol>
-<li>Algebra</li>
-<li>Algorithm</li>
-<li>Approximation</li>
-<li>Function</li>
-<li>Geometry</li>
-<li>Modular</li>
-<li>Primes</li>
-<li>Random</li>
-</ol>
 
+
+# Status of the Project
+* Work in progress. 
 
 
