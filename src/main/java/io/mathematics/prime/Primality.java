@@ -50,8 +50,54 @@ public interface Primality extends Algorithm {
       }
       i++;
     }
-    return primality / iterations;
+    return (double) primality / iterations;
   }
 
+  static double millerRabin(long p, long k) {
+    if (p <= 1) {
+      throw new IllegalArgumentException("Candidate number must be bigger than 1");
+    }
+    if (p <= 3) {
+      return 0;
+    }
+    //if n is even is not prime
+    if (p % 2 == 0) {
+      return 1;
+    }
+    long d = p - 1;
+    long s = 0;
+    while (d % 2 == 0 && d > 0) {
+      d = d >> 1;
+      s++;
+    }
+    if (d == 0) {
+      throw new UnsupportedOperationException("Couldn't find d>0 odd, such that n-1=d*2^s");
+    }
+
+    if (s == 0) {
+      throw new UnsupportedOperationException("Couldn't find s>0 odd, such that n-1=d*2^s");
+    }
+    long primality = 0;
+    int i = 0;
+    while (i < k) {
+      long a = CommonRandom.secure(1, (int) p - 1);
+      long x = ModExp.squareMultiply(a, d, p);
+      if (x == 1 || x == -1) {
+        primality++;
+      } else {
+        int j = 0;
+        while (j < s) {
+          long y = x * x % p;
+          if (y == -1) {
+            primality++;
+            break;
+          }
+          j++;
+        }
+      }
+      i++;
+    }
+    return primality / k;
+  }
 
 }

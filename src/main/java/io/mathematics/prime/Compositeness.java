@@ -10,29 +10,57 @@ public interface Compositeness extends Algorithm {
     return 0;
   }
 
-  static double millerRabin(int p, int k) {
-    double compositeness = fermat(p, k);
-    long s = 4;
-    long d = 35;
+
+  static double millerRabin(long p, long k) {
+    if (p <= 1) {
+      throw new IllegalArgumentException("Candidate number must be bigger than 1");
+    }
+    if (p <= 3) {
+      return 0;
+    }
+    //if n is even is not prime
+    if (p % 2 == 0) {
+      return 1;
+    }
+    long d = p - 1;
+    long s = 0;
+    while (d % 2 == 0) {
+      d = d >> 1;
+      s++;
+    }
+    if (d == 0) {
+      throw new UnsupportedOperationException("Couldn't find d>0 odd, such that n-1=d*2^s");
+    }
+
+    if (s == 0) {
+      throw new UnsupportedOperationException("Couldn't find s>0 odd, such that n-1=d*2^s");
+    }
+    long composite = 0;
     int i = 0;
     while (i < k) {
-      int a = CommonRandom.secure(2, p - 2);
+      long a = CommonRandom.secure(2, (int) p - 1);
       long x = ModExp.squareMultiply(a, d, p);
-      int j = 0;
-      while (j < s) {
-        long y = x * x % p;
-        if (y == 1 && x != 1 && x != p - 1) {
-          return 1;
+      if (x == 1 || x == -1) {
+        //probably prime do nothing
+      } else {
+        int j = 0;
+        while (j < s) {
+          long y = x * x % p;
+          if (y == 1 && x != p - 1) {
+            composite++;
+            break;
+          }
+          if (y != 1) {
+            composite++;
+            break;
+          }
+          j++;
         }
-        x = y;
-        if (y == 1) {
-          return 1;
-        }
-        j++;
       }
       i++;
     }
-    return 0;
+    return composite / k;
+
   }
 
   /**
