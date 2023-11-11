@@ -1,16 +1,77 @@
 # A mathematics module #
 
-* Implementations around topics :
+### Status of the project
+
+* Work in progress.
+
+### Topics :
   <br>
 
-| Algebra |      	Algorithm       | Approximation	 |                                    Function | Geometry |                              Modular                               |                      Primes                       |        Other        |
-|---------|:---------------------:|:--------------:|--------------------------------------------:|:--------:|:------------------------------------------------------------------:|:-------------------------------------------------:|:-------------------:|
-|         | 	Euclidean & extended |   Stirling 	   | Min, max, euclidean, manhattan norms.     	 |    	     |          Common residue, least residue, congruence     	           |                       PNT 	                       | Birthday paradox 	  | 
-|         |  Bezout coefficients  |       	        |                                           	 |    	     | Multiply-reduce, square-multiply,                                	 | Trial-division, fermat , miller-rabin           	 | Heron & pythagoras	 | 
-|         |                       |       	        |                          	Euler totient   	 |    	     |                            CRT        	                            |                         	                         |          	          | 
+#### Algebra :
+
+<ul>
+</ul>
+<br>
+
+#### Geometry :
+
+<ul>
+</ul>
+<br>
+
+#### Algorithms :
+
+<ul>
+<li>Euclidean algorithm</li>
+<li>Extended Euclidean algorithm</li>
+<li>Bezout coefficients</li>
+<li>Heron</li>
+<li>Pythagoras</li>
+</ul>
+<br>
+
+#### Approximations :
+
+<ul>
+<li>Stirling</li>
+</ul>
+<br>
+
+#### Functions :
+
+<ul>
+<li>Min, Max, Abs</li>
+<li>Euclidean, Manhattan norms</li>
+<li>Euler totient</li>
+</ul>
+<br>
+
+#### Modular :
+
+<ul>
+<li>Common residue, Least residue, congruence</li>
+<li>Addition, subtraction, multiplication, exponentiation (multiply-reduce, square-multiply)</li>
+<li>Log (first discrete log)</li>
+<li>CRT</li>
+</ul>
+<br>
+
+#### Primes :
+
+<ul>
+<li>PNT(Prime number theorem approx)</li>
+<li>Primality & compositeness (Trial-division, Fermat, Miller-Rabin)</li>
+</ul>
+<br>
+
+#### Paradox :
+
+<ul>
+<li>Birthday paradox</li>
+</ul>
+<br>
 
 
-# Status of the Project
-* Work in progress. 
+
 
 
