@@ -4,9 +4,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.mathematics</groupId>
-  <artifactId>mathematics</artifactId>
-  <name>mathematics</name>
+  <groupId>io.jmathematics</groupId>
+  <artifactId>jmathematics</artifactId>
+  <name>jmathematics</name>
   <packaging>jar</packaging>
 
   <version>0.0.1-SNAPSHOT</version>
