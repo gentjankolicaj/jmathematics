@@ -16,6 +16,16 @@
 #### Geometry :
 
 <ul>
+<li>Line</li>
+<li>Triangle</li>
+<li>Rectangle</li>
+<li>Square</li>
+<li>Rhombus</li>
+<li>Parallelogram</li>
+<li>Trapezoid</li>
+<li>Pentagram</li>
+<li>Hexagram</li>
+<li>Circle</li>
 </ul>
 <br>
 
