@@ -1,4 +1,4 @@
-module mathematics {
+module jmathematics {
   requires java.se;
   requires org.apache.commons.lang3;
   requires org.apache.commons.collections4;
@@ -6,11 +6,11 @@ module mathematics {
   requires lombok;
   requires org.slf4j;
 
-  exports io.mathematics;
-  exports io.mathematics.lang;
-  exports io.mathematics.algorithm;
-  exports io.mathematics.prime;
-  exports io.mathematics.random;
-  exports io.mathematics.modular;
-  exports io.mathematics.func;
+  exports io.jmathematics;
+  exports io.jmathematics.lang;
+  exports io.jmathematics.algorithm;
+  exports io.jmathematics.prime;
+  exports io.jmathematics.random;
+  exports io.jmathematics.modular;
+  exports io.jmathematics.func;
 }
