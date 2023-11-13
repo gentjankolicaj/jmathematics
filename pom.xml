@@ -50,6 +50,7 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+
   <dependencies>
     <!-- util libraries -->
     <dependency>
@@ -126,7 +127,6 @@
       <artifactId>mongodb</artifactId>
       <scope>test</scope>
     </dependency>
-
 
     <!-- Commons dependencies -->
     <dependency>

@@ -19,13 +19,15 @@ class PrimalityTest {
 
   @Test
   void fermat() {
-    assertThat(Primality.fermat(3671, 10000)).isEqualTo(1);
-    assertThat(Primality.fermat(3672, 10000)).isEqualTo(0);
+    assertThat(Primality.fermat(3671, 100)).isEqualTo(1);
+    assertThat(Primality.fermat(3672, 100)).isZero();
   }
 
   @Test
   void millerRabin() {
-    assertThat(Primality.millerRabin(561, 5)).isEqualTo(0);
-    assertThat(Primality.millerRabin(563, 5)).isEqualTo(1);
+    assertThat(Primality.millerRabin(561, 39)).isZero();
+    assertThat(Primality.millerRabin(563, 39)).isEqualTo(1);
+    assertThat(Primality.millerRabin(3671, 39)).isEqualTo(1);
+    assertThat(Primality.millerRabin(3672, 39)).isZero();
   }
 }
