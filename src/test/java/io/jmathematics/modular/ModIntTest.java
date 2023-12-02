@@ -8,15 +8,24 @@ import org.junit.jupiter.api.Test;
 class ModIntTest {
 
   @Test
-  void residueClassSize() {
+  void residueSystemSize() {
     ModInt mod13 = new ModInt(13);
-    assertThat(mod13.residueClassSize()).isEqualTo(13);
+    assertThat(mod13.residueSystemSize()).isEqualTo(13);
   }
 
   @Test
-  void residueClasses() {
+  void residueSystem() {
     ModInt mod13 = new ModInt(13);
-    assertThat(mod13.residueClasses()).contains(0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12);
+    assertThat(mod13.residueSystem()).contains(0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12);
+  }
+
+  @Test
+  void equivClasses() {
+    ModInt mod5 = new ModInt(5);
+    int[][] equivClasses = mod5.equivClasses(5);
+    assertThat(equivClasses).hasDimensions(5, 5);
+    assertThat(equivClasses[0]).contains(-10, -5, 0, 5, 10);
+    assertThat(equivClasses[4]).contains(-6, -1, 4, 9, 14);
   }
 
   @Test
@@ -80,4 +89,6 @@ class ModIntTest {
     assertThat(mod13.commonResidue(-168)).isEqualTo(1);
     assertThat(mod13.commonResidue(-40)).isEqualTo(12);
   }
+
+
 }

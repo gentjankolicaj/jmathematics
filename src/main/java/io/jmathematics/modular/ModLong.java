@@ -20,15 +20,33 @@ public class ModLong {
   }
 
 
-  public long residueClassSize() {
+  public long residueSystemSize() {
     return modulus;
   }
 
-  public long[] residueClasses() {
+  public long[] residueSystem() {
     log.warn(
         "Modulus of type long '{}', casted to int '{}' because java doesn't support array index of type long.Not all residue classes are present !!!",
         modulus, (int) modulus);
-    return Arrays.stream(residueSystem.residueClasses((int) modulus)).asLongStream().toArray();
+    return Arrays.stream(residueSystem.residueSystem((int) modulus)).asLongStream().toArray();
+  }
+
+
+  /**
+   * All equivalence classes of modulus with number of elements=classSize
+   *
+   * @param classSize equivalence class size
+   * @return equivalent classes
+   */
+  public long[][] equivClasses(int classSize) {
+    long[][] equivClasses = new long[(int) modulus][classSize];
+    for (int i = 0; i < modulus; i++) {
+      long negativeMembers = classSize / 2;
+      for (int j = 0; j < classSize; j++) {
+        equivClasses[i][j] = -(negativeMembers * modulus) + i + j * modulus;
+      }
+    }
+    return equivClasses;
   }
 
   public boolean isCongruent(long a, long b) {
@@ -135,6 +153,8 @@ public class ModLong {
   }
 
   /**
+   * Exponentiation using square-multiply method.
+   *
    * @param base     base
    * @param exponent exponent
    * @return base^exponent (mod modulus)

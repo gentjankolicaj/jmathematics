@@ -13,4 +13,5 @@ module jmathematics {
   exports io.jmathematics.random;
   exports io.jmathematics.modular;
   exports io.jmathematics.func;
+  exports io.jmathematics.exception;
 }

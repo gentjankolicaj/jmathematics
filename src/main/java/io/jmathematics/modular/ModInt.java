@@ -15,12 +15,29 @@ public class ModInt {
     this.residueSystem = ResidueSystem.LEAST;
   }
 
-  public int residueClassSize() {
+  public int residueSystemSize() {
     return modulus;
   }
 
-  public int[] residueClasses() {
-    return residueSystem.residueClasses(modulus);
+  public int[] residueSystem() {
+    return residueSystem.residueSystem(modulus);
+  }
+
+  /**
+   * All equivalence classes of modulus with number of elements=classSize
+   *
+   * @param classSize equivalence class size
+   * @return equivalent classes
+   */
+  public int[][] equivClasses(int classSize) {
+    int[][] equivClasses = new int[modulus][classSize];
+    for (int i = 0; i < modulus; i++) {
+      int negativeMembers = classSize / 2;
+      for (int j = 0; j < classSize; j++) {
+        equivClasses[i][j] = -(negativeMembers * modulus) + i + j * modulus;
+      }
+    }
+    return equivClasses;
   }
 
   public boolean isCongruent(int a, int b) {
@@ -127,6 +144,8 @@ public class ModInt {
   }
 
   /**
+   * Exponentiation using square-multiply method.
+   *
    * @param base     base
    * @param exponent exponent
    * @return base^exponent (mod modulus)

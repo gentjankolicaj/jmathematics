@@ -59,7 +59,7 @@
 #### Modular :
 
 <ul>
-<li>Common residue, Least residue, congruence</li>
+<li>Common residue, least residue, congruence, equivalence classes</li>
 <li>Addition, subtraction, multiplication, exponentiation (multiply-reduce, square-multiply)</li>
 <li>Log (first discrete log)</li>
 <li>CRT</li>
