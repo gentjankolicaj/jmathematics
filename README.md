@@ -1,4 +1,4 @@
-# A mathematics module #
+# jmathematics
 
 ### Status of the project
 
