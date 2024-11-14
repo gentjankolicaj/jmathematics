@@ -180,6 +180,10 @@
                 <version>${jmh.version}</version>
               </path>
             </annotationProcessorPaths>
+            <compilerArgs>
+              <arg>--class-path</arg>
+              <arg>${project.build.directory}/classes</arg>
+            </compilerArgs>
           </configuration>
         </plugin>
       </plugins>

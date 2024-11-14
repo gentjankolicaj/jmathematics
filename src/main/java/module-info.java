@@ -3,7 +3,7 @@ module io.jmathematics {
   requires org.apache.commons.lang3;
   requires org.apache.commons.collections4;
   requires org.apache.commons.io;
-  requires lombok;
+  requires static lombok;
   requires org.slf4j;
 
   exports io.jmathematics;
