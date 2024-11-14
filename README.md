@@ -1,7 +1,7 @@
 # jmathematics
 
 * A java module for mathematics.
-* Status of the project : work in progress...
+* Status of the project : work in progress.
 
 ## How to use it ?
 
