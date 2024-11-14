@@ -22,6 +22,7 @@
     <mockito.version>5.2.0</mockito.version>
     <assertj.version>3.24.2</assertj.version>
     <lombok.version>1.18.26</lombok.version>
+    <logback.version>1.5.12</logback.version>
     <jmh.version>1.36</jmh.version>
   </properties>
 
@@ -92,6 +93,7 @@
       <version>${assertj.version}</version>
       <scope>test</scope>
     </dependency>
+
 
     <!-- Commons dependencies -->
     <dependency>
